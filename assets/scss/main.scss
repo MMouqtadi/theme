@@ -253,7 +253,7 @@ body.voidbox-shell--home {
 .voidbox-banner__grid {
   position: relative;
   z-index: 2;
-  padding: clamp(6rem, 12vw, 8.5rem) clamp(2.5rem, 6vw, 4rem) var(--voidbox-footer-height);
+  padding: clamp(6rem, 12vw, 8.5rem) clamp(2.5rem, 6vw, 4rem) 3rem;
   display: grid;
   gap: 2.8rem;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -262,7 +262,7 @@ body.voidbox-shell--home {
 
 .voidbox-banner__content {
   align-self: flex-start;
-  margin-top: -1.5rem;
+  margin-top: -2.5rem;
 }
 
 @media (min-width: 992px) {
