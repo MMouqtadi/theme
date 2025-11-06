@@ -260,6 +260,11 @@ body.voidbox-shell--home {
   align-items: center;
 }
 
+.voidbox-banner__content {
+  align-self: flex-start;
+  margin-top: -1.5rem;
+}
+
 @media (min-width: 992px) {
   .voidbox-banner__grid {
     grid-template-columns: 1.2fr 1fr;
