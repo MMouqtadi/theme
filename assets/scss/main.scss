@@ -5,7 +5,6 @@
 @use "includes/components/table";
 @use "includes/components/jumbotron";
 @use "includes/components/challenge";
-@use "includes/components/sticky-footer";
 @use "includes/components/graphs";
 
 @use "includes/utils/fonts";
@@ -79,6 +78,11 @@ body {
   color: var(--voidbox-white);
   font-family: "IBM Plex Mono", "SFMono-Regular", "Roboto Mono", "Courier New", monospace;
   letter-spacing: 0.05em;
+}
+
+body.voidbox-shell {
+  display: flex;
+  flex-direction: column;
 }
 
 body::before,
@@ -193,6 +197,7 @@ body.voidbox-shell--home {
   min-height: calc(100vh - var(--voidbox-footer-height));
   display: flex;
   flex-direction: column;
+  flex: 1 0 auto;
   padding: var(--voidbox-nav-offset) 0 0;
 }
 
@@ -832,6 +837,7 @@ table.table tbody tr:hover {
   box-shadow: 0 -12px 32px rgba(0, 0, 0, 0.38);
   display: flex;
   justify-content: center;
+  margin-top: auto;
 }
 
 .footer-inner {
