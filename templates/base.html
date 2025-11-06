@@ -46,7 +46,7 @@
 
   {{ Configs.theme_header }}
 </head>
-<body class="voidbox-shell">
+<body class="voidbox-shell{% if request.path == '/' %} voidbox-shell--home{% endif %}">
 {% include "components/navbar.html" %}
 <main role="main" class="voidbox-main{% if request.path == '/' %} voidbox-main--home{% else %} voidbox-main--content{% endif %}">
   {% if request.path == '/' %}

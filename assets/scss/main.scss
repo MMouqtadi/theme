@@ -124,6 +124,10 @@ body a:focus {
   opacity: 0.85;
 }
 
+body.voidbox-shell--home {
+  background: #07080a;
+}
+
 .navbar {
   background: rgba(5, 5, 5, 0.92) !important;
   border-bottom: 1px solid var(--voidbox-edge);
@@ -455,6 +459,11 @@ h1[data-glitch=""]::after {
   display: block;
   text-align: center;
   margin: 0 auto 0.9rem;
+}
+
+.voidbox-page-header h1.voidbox-page-header__title {
+  display: block;
+  width: 100%;
 }
 
 .voidbox-page-header__note {
