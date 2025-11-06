@@ -3,7 +3,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>{{ title or Configs.ctf_name }}</title>
+  {% set head_title = "VoidBox CTF 2025" %}
+  {% if request.path != '/' and title %}
+    {% set head_title = title ~ " | " ~ head_title %}
+  {% endif %}
+  <title>{{ head_title }}</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {% set default_icon = url_for('views.themes', path='img/voidbox_logo.svg') %}
