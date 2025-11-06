@@ -453,6 +453,7 @@ h1[data-glitch=""]::after {
 
 .voidbox-page-header__title {
   display: block;
+  position: relative;
   width: fit-content;
   max-width: 100%;
   margin-bottom: 0.9rem;
@@ -460,6 +461,7 @@ h1[data-glitch=""]::after {
 
 .voidbox-page-header__title--center {
   margin: 0 auto 0.9rem;
+  text-align: center;
 }
 
 .voidbox-page-header__note {
