@@ -451,16 +451,15 @@ h1[data-glitch=""]::after {
   text-shadow: 0 8px 24px rgba(0, 0, 0, 0.55);
 }
 
-.voidbox-page-header__title {
-  display: block;
-  position: relative;
-  width: fit-content;
-  max-width: 100%;
-  margin-bottom: 0.9rem;
+.voidbox-page-header__title-wrap {
+  display: flex;
+  justify-content: center;
 }
 
-.voidbox-page-header__title--center {
-  margin: 0 auto 0.9rem;
+.voidbox-page-header__title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0.9rem;
   text-align: center;
 }
 
