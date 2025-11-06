@@ -1,0 +1,76 @@
+<!-- Powered by CTFd: https://github.com/CTFd/CTFd -->
+{# Powered by CTFd: https://github.com/CTFd/CTFd #}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{ title or Configs.ctf_name }}</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% set default_icon = url_for('views.themes', path='img/voidbox_logo.svg') %}
+  <link rel="shortcut icon" href="{{ Configs.ctf_small_icon or default_icon }}" type="image/x-icon">
+
+  {{ meta | safe }}
+
+  {% block stylesheets %}
+    {{ Assets.css("assets/scss/main.scss") }}
+  {% endblock %}
+
+  {{ Plugins.styles }}
+
+  {{ Assets.js("assets/js/color_mode_switcher.js", type=None) }}
+
+  <script type="text/javascript">
+      window.init = {
+          'urlRoot': "{{ request.script_root }}",
+          'csrfNonce': "{{ Session.nonce }}",
+          'userMode': "{{ Configs.user_mode }}",
+          'userId': {{ Session.id }},
+          'userName': {{ User.name | tojson }},
+          'userEmail': {{ User.email | tojson }},
+          'userVerified': {{ User.verified | tojson }},
+          'teamId': {{ Team.id | tojson }},
+          'teamName': {{ Team.name | tojson }},
+          'start': {{ Configs.start | tojson }},
+          'end': {{ Configs.end | tojson }},
+          'themeSettings': {{ Configs.theme_settings | tojson }},
+          'eventSounds': [
+            "{{ url_for('views.themes', path='sounds/notification.webm') }}",
+            "{{ url_for('views.themes', path='sounds/notification.mp3') }}",
+          ],
+      }
+  </script>
+
+  {{ Configs.theme_header }}
+</head>
+<body class="voidbox-shell">
+{% include "components/navbar.html" %}
+<main role="main" class="voidbox-main{% if request.path == '/' %} voidbox-main--home{% else %} voidbox-main--content{% endif %}">
+  {% if request.path == '/' %}
+    {% include "components/banner.html" %}
+  {% endif %}
+
+  {% block content %}
+  {% endblock %}
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span class="footer-accent">//</span>
+    <span class="footer-text">M4SEC x DeepSec</span>
+  </div>
+</footer>
+
+{% include "components/notifications.html" %}
+
+{% block scripts %}
+  {{ Assets.js("assets/js/page.js") }}
+{% endblock %}
+
+{{ Plugins.scripts }}
+
+{{ Configs.theme_footer }}
+</body>
+</html>
+
+{# Powered by CTFd: https://github.com/CTFd/CTFd #}
+<!-- Powered by CTFd: https://github.com/CTFd/CTFd -->

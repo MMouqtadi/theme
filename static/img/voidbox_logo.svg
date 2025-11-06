@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="vb_bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#090909" />
+      <stop offset="100%" stop-color="#050505" />
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" fill="url(#vb_bg)" />
+  <g fill="none" stroke="#ffffff" stroke-width="2.8" stroke-linejoin="round" stroke-linecap="round">
+    <polygon points="60 18 28 36 60 54 92 36" />
+    <polygon points="28 36 28 78 60 96 60 54" />
+    <polygon points="92 36 92 78 60 96 60 54" />
+    <path d="M60 18L60 54M44 27L44 71M76 27L76 71" />
+    <path d="M37 42L83 42M37 72L83 72" />
+    <path stroke-dasharray="6 6" d="M60 60L60 96" />
+  </g>
+  <circle cx="60" cy="60" r="6" fill="#ffffff" />
+</svg>
