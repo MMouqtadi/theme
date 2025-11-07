@@ -526,6 +526,8 @@ h1[data-glitch=""]::after {
   border-radius: 22px;
   width: 100%;
   text-align: left;
+  overflow: hidden;
+  isolation: isolate;
 }
 
 .challenge-inner {
@@ -592,7 +594,6 @@ h1[data-glitch=""]::after {
   background: linear-gradient(160deg, rgba(255, 255, 255, 0.95), rgba(220, 220, 220, 0.85));
   color: #050505;
   border-color: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 20px 42px rgba(255, 255, 255, 0.25);
 }
 
 .challenge-button.challenge-solved .voidbox-challenge-tag {
