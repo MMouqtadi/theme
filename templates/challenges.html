@@ -49,17 +49,11 @@
                         :value="c.id" @click="loadChallenge(c.id)"
                     >
 
-                      <div class="challenge-inner my-3">
-                        <p>
-                          <span class="voidbox-kicker-small" x-text="category"></span>
-                          <span x-text="c.name" class="d-block mt-2"></span>
-                        </p>
+                      <div class="challenge-inner">
+                        <div class="voidbox-challenge-title" x-text="c.name"></div>
                         <div class="voidbox-challenge-meta">
                           <span class="voidbox-challenge-score" x-text="c.value"></span>
-                          <span
-                            class="voidbox-challenge-status"
-                            x-text="c.solved_by_me ? '{% trans %}breached{% endtrans %}' : '{% trans %}sealed{% endtrans %}'"
-                          ></span>
+                          <span class="voidbox-challenge-tag" x-text="category"></span>
                         </div>
                       </div>
                     </button>
