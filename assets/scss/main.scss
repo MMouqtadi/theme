@@ -526,6 +526,7 @@ h1[data-glitch=""]::after {
   border-radius: 22px;
   width: 100%;
   text-align: left;
+  display: block;
   overflow: hidden;
   isolation: isolate;
 }
@@ -542,7 +543,7 @@ h1[data-glitch=""]::after {
   border: 1px solid var(--voidbox-edge);
   background: linear-gradient(180deg, rgba(11, 11, 16, 0.95), rgba(6, 6, 10, 0.9));
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
-  transition: border 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  transition: border 0.2s ease, transform 0.18s ease, box-shadow 0.18s ease;
   min-height: 100%;
   transform-origin: center;
   transform: scale(1);
@@ -551,8 +552,8 @@ h1[data-glitch=""]::after {
 .challenge-button:hover .challenge-inner,
 .challenge-button:focus-visible .challenge-inner {
   border-color: rgba(255, 255, 255, 0.45);
-  transform: scale(1.03);
-  box-shadow: 0 22px 46px rgba(0, 0, 0, 0.55);
+  transform: scale(1.015);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.55);
 }
 
 .voidbox-challenge-title {
@@ -594,6 +595,7 @@ h1[data-glitch=""]::after {
   background: linear-gradient(160deg, rgba(255, 255, 255, 0.95), rgba(220, 220, 220, 0.85));
   color: #050505;
   border-color: rgba(255, 255, 255, 0.9);
+  box-shadow: none;
 }
 
 .challenge-button.challenge-solved .voidbox-challenge-tag {
